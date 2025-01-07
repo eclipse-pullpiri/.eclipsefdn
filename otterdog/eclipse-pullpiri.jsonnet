@@ -26,6 +26,9 @@ orgs.newOrg('automotive.pullpiri', 'eclipse-pullpiri') {
       has_projects: false,
       has_wiki: true,
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: write,
+      },
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 1,
