@@ -33,6 +33,29 @@ orgs.newOrg('automotive.pullpiri', 'eclipse-pullpiri') {
         },
       ],
     },
+    orgs.newRepo('pullpiri-dashboard') {
+      description: "The Pullpiri Dashboard is a UI interface for Pullpiri project.",
+      topics+: [
+        "pullpiri",
+        "automotive",
+        "dashboard",
+        "orchestration"
+      ],
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      has_discussions: true,
+      has_issues: true,
+      has_projects: false,
+      has_wiki: false,
+      web_commit_signoff_required: false,
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_conversation_resolution: true,
+        },
+      ],
+    },
   ],
 } + {
   # snippet added due to 'https://github.com/EclipseFdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
