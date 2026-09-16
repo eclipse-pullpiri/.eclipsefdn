@@ -69,7 +69,7 @@ orgs.newOrg('automotive.pullpiri', 'eclipse-pullpiri') {
       ],
     },
      orgs.newRepo('vel') {
-      description: "The Vehicle Evidence Layer supplies the necessary evidences to OEM layers for the purpose of managing OEM decisions .",
+      description: "The Vehicle Evidence Layer supplies the necessary evidence to OEM layers for managing OEM decisions.",
       topics+: [
         "pullpiri",
         "automotive",
